@@ -9,29 +9,6 @@
 
 struct ListNode* mergeTwoLists(struct ListNode* a, struct ListNode* b){
    struct ListNode * c=a,*e,*d=a;
-//     t=list1;
-//     if(list1==NULL)
-//         return list2;
-//     else if(list2==NULL)
-//         return list1;
-//     else{
-//     while(list1!=NULL||list2!=NULL)
-//     {
-//         if(list1->next==NULL)
-//         {
-//             list1->next=list2;
-//             break;
-//         }
-//         else if(list2->next==NULL)
-//         {
-//             break;
-//         }
-//         if(list1->val>list2->val)
-//         {
-            
-//         }
-//     }
-//     }
       if(a==NULL&&b==NULL)
         return NULL;
       else if(a==NULL&&b!=NULL)
