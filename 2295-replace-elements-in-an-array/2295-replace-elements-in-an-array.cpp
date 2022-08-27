@@ -9,11 +9,9 @@ public:
         }
         for(int i=0;i<k;i++)
         {
-            map<int,int>::iterator itr;
-            itr=m.find(o[i][0]);
+            
             nums[m[o[i][0]]]=o[i][1];
             m[o[i][1]]=m[o[i][0]];
-            m.erase(itr);
         }
         return nums;
     }
