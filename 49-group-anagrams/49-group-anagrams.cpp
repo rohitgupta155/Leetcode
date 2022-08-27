@@ -10,11 +10,9 @@ public:
         {
             vector<string> an;
             an.push_back(w[i]);
-        //string st=w[i];
-            //sort(st.begin(),st.end());
+
         for(int j=i+1;j<w.size();j++){
-            // string a=w[j];
-            // sort(a.begin(),a.end());
+
          if(d[i]==d[j]){
              an.push_back(w[j]);
          w.erase(w.begin()+j);
