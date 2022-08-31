@@ -23,16 +23,13 @@ public:
             return;
         string c=to_string(r->val);
         a.append(c);
-        a.push_back('-');
-        a.push_back('>');
-        
+        if(!r->left&&!r->right)
+         {s.push_back(a); } 
+        a.append("->");
         if(r->left)
         push(r->left,a);
         if(r->right)
         push(r->right,a);
-        if(!r->left&&!r->right)
-         {a.erase(a.end()-1);
-        a.erase(a.end()-1);
-        s.push_back(a); }       
+            
     }
 };
