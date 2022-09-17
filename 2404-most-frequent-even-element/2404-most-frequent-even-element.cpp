@@ -6,7 +6,7 @@ public:
         for(auto i:nums)
           { if(i%2==0)
             a[i]++;}
-			 if(a.size()==0)   
+			 if(a.size()==0)   //Checking if we have a element or not after checking if not return -1
             return -1;
         int m=INT_MIN;
 	   /* Found the max frequency from map*/
