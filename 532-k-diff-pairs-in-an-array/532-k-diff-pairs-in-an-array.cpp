@@ -10,7 +10,7 @@ public:
             if(k==0)
                 {if(i.second>1)
                 c++;}
-            else if(m.find(k+i.first)!=m.end())
+            else if(m.count(k+i.first))
                 c++;
         }
         return c;
