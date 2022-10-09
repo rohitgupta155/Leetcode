@@ -23,7 +23,7 @@ public:
     {
         if(!r)
             return;
-        m[r->val]=c;\
+        m[r->val]=c;
             c++;
         set(r->left);
         set(r->right);
