@@ -1,13 +1,14 @@
 class Solution {
 public:
     int countQuadruplets(vector<int>& nums) {
+        unordered_map<int,int> m;
         int c=0,n=nums.size();
-        for(int i=0;i<n;i++)
-            for(int j=i+1;j<n;j++)
-                for(int k=j+1;k<n;k++)
-                    for(int l=k+1;l<n;l++)
-                        if((nums[i]+nums[j]+nums[k])==nums[l])
-                            c++;
+        m[nums[n-1]]++;
+        for(int i=n-2;i>=0;i--){
+            for(int j=i-1;j>=0;j--)
+                for(int k=j-1;k>=0;k--)
+                        c+=m[nums[i]+nums[j]+nums[k]];
+        m[nums[i]]++;}
         return c;
     }
 };
