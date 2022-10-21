@@ -1,0 +1,64 @@
+class Solution {
+public:
+    vector<vector<int>> queensAttacktheKing(vector<vector<int>>& q, vector<int>& k) {
+        set<vector<int>> s(q.begin(),q.end());
+        q.clear();
+        int i=k[0],j=k[1]+1;
+        for(;j<8;j++)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+         i=k[0],j=k[1]-1;
+        for(;j>=0;j--)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+         i=k[0]-1,j=k[1];
+        for(;i>=0;i--)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+         i=k[0]+1,j=k[1];
+        for(;i<8;i++)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+         i=k[0]-1,j=k[1]-1;
+        for(;i>=0&&j>=0;j--,i--)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+         i=k[0]-1,j=k[1]+1;
+        for(;i<8&&j<8;j++,i--)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+         i=k[0]+1,j=k[1]+1;
+        for(;i<8&&j<8;j++,i++)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+        i=k[0]+1,j=k[1]-1;
+        for(;i<8&&j<8;j--,i++)
+            if(s.find({i,j})!=s.end())
+            {
+                q.push_back({i,j});
+                break;
+            }
+        return q;
+    }
+};
