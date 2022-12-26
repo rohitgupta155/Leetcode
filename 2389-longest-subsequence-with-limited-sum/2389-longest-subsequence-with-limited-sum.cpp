@@ -2,7 +2,6 @@ class Solution {
 public:
     vector<int> answerQueries(vector<int>& nums, vector<int>& queries) {
         sort(nums.begin(),nums.end());
-        int t=accumulate(nums.begin(),nums.end(),0);
         vector<int> ans;
         for(auto i:queries)
         {
