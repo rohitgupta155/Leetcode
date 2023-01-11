@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select u.name,sum(case when u.id=r.user_id then r.distance else 0 end) as travelled_distance from users u, rides r group by u.id order by sum(case when u.id=r.user_id then r.distance else 0 end) desc,name;  
