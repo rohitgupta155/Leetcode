@@ -1,0 +1,2 @@
+/* Write your T-SQL query statement below */
+select isnull(e.employee_id,s.employee_id) employee_id from employees e full outer join salaries s on e.employee_id=s.employee_id where e.employee_id is NULL or s.employee_id is NULL order by employee_id;
