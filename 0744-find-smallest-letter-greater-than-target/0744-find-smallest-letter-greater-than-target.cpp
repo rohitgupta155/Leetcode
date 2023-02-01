@@ -7,7 +7,7 @@ public:
         //     if(letters[i]>target)
         //         return letters[i];
         // }
-        // return letters[0];
+        // return letters[0];    accepted but O(N)
         int l=0,r=letters.size()-1;
         while(l<=r){
             int m=(r-l)/2+l;
