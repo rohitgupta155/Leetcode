@@ -7,8 +7,7 @@ public:
         for(int i=0;i<p.size();i++)
             a[p[i]]++,b[s[i]]++;
         vector<int> ans;
-        bool found=false;
-        if(matches(a,b)){found=true;ans.push_back(0);}
+        if(matches(a,b)){ans.push_back(0);}
         for(int i=0;i<=s.size()-p.size();i++)
         {
                 b[s[i]]--;
