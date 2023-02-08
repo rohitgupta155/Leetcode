@@ -32,7 +32,7 @@ public:
     
     bool check(vector<vector<char>> b,int r,int c)
     {
-        map<char,int> m;
+        unordered_map<char,int> m;
         for(int i=r;i<r+3;i++)
         {
           for(int j=c;j<c+3;j++)
