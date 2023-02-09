@@ -14,7 +14,6 @@ public:
                 a.clear();
                 i=j;
                 j=i+1;
-                cout<<i<<endl;
             }
         }
         int len=a.size();
