@@ -1,5 +1,6 @@
 struct node{
     char l;
+    bool end=false;
     unordered_map<char,node*> nexts;
     node():l('a'){}
     node(char x):l(x){}
@@ -22,11 +23,18 @@ public:
              temp->nexts[i]=new node(i);
             temp=temp->nexts[i];
         }
+        temp->end=true;
     }
     
     bool search(string word) {
-        
-        return m.count(word);
+        node *temp=root;
+        for(auto i:word)
+        {
+         if(!temp->nexts[i])
+             return false;
+            temp=temp->nexts[i];
+        }
+        return temp->end;
     }
     
     bool startsWith(string prefix) {
