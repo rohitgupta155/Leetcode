@@ -11,7 +11,6 @@ public:
                        j=m-1;
             }
            else{
-               cout<<i<<" "<<j<<" "<<grid[i][j]<<endl;
                j--;
                c++;
            }
