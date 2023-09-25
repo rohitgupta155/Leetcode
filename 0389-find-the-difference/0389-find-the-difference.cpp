@@ -9,10 +9,10 @@ public:
             b[t[i]-'a']++;
         }
         b[t[n]-'a']++;
-        for(int i=0;i<=n;i++)
+        for(int i=0;i<26;i++)
         {
-            if(a[t[i]-'a']!=b[t[i]-'a'])
-                return t[i];
+            if(a[i]!=b[i])
+                return i+'a';
         }
         return 'a';
         
