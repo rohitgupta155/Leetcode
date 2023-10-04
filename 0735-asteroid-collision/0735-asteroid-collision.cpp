@@ -4,31 +4,6 @@ public:
         int n=a.size();
         stack<int> s;
         s.push(a[n-1]);
-        // for(int i=n-2;i>=0;i--)
-        // {
-        //     if(s.empty())
-        //         s.push(a[i]);
-        //     else if((a[i]>0&&s.top()>0)||(a[i]<0&&s.top()<0))
-        //         s.push(a[i]);
-        //     else if(abs(a[i])>abs(s.top())&&a[i]>0&&s.top()<0){
-        //         if(s.top()<0){
-        //         while(!s.empty()&&abs(a[i])>abs(s.top())&&a[i]>0&&s.top()<0)s.pop();
-        //         if(!s.empty()&&abs(a[i])==abs(s.top())&&a[i]>0&&s.top()<0)
-        //             {s.pop();
-        //             continue;}}
-        //          s.push(a[i]);}
-        //     else if(abs(a[i])==abs(s.top())) {
-        //         if(s.top()<0)
-        //         s.pop();
-        //         else
-        //             s.push(a[i]);
-        //     }
-        //     else{
-        //         if(s.top()<0&&abs(a[i])<abs(s.top()))
-        //             continue;
-        //         s.push(a[i]);
-        //     }
-        // }
         for(int i=n-2;i>=0;i--)
         {
             if(s.empty())
@@ -46,7 +21,6 @@ public:
         while(!s.empty()){
             a.push_back(s.top());
         s.pop();}
-        //reverse(a.begin(),a.end());
         return a;
     }
     void destruct(stack<int> &s,int i)
