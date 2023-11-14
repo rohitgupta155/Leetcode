@@ -18,8 +18,6 @@ public:
             if(r[s[i+1]]==0)
                 r.erase(s[i+1]);
         }
-        for(auto i:c)
-            cout<<i<<endl;
         return c.size();
         
     }
