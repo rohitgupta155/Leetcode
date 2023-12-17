@@ -2,7 +2,6 @@ class FoodRatings {
 public:
     unordered_map<string,map<int,set<string>>> m;
     unordered_map<string,pair<string,int>> fcr;
-    unordered_map<string,int> cr;
     FoodRatings(vector<string>& foods, vector<string>& cuisines, vector<int>& ratings) {
         for(int i=0;i<foods.size();i++)
         {
@@ -10,20 +9,6 @@ public:
             fcr[foods[i]]={cuisines[i],ratings[i]};
             
         }
-        // for(auto i:m)
-        // {
-        //     cout<<i.first<<": "<<endl;
-        //     for(auto j:i.second)
-        //     {
-        //         cout<<j.first<<":";
-        //         while(!j.second.empty()){
-        //             cout<<j.second.top()<<" ";
-        //             j.second.pop();
-        //         }
-        //         cout<<endl;
-        //     }
-        //     cout<<endl;
-        // }
     }
     
     void changeRating(string food, int newRating) {
@@ -36,9 +21,7 @@ public:
     }
     
     string highestRated(string cuisine) {
-        auto i=m[cuisine].rbegin();
-        auto j=i->second;
-        return *j.begin();
+        return *m[cuisine].rbegin()->second.begin();
     
     }
 };
