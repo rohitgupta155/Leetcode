@@ -1,0 +1,1 @@
+select Department, Employee, Salary from (select employee.name as Employee , employee.salary as Salary, employee.departmentid as id, dense_rank() over(partition by employee.departmentid order by salary desc) rank , department.name as Department from employee left join department on employee.departmentid=department.id) where rank=1;
