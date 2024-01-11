@@ -1,8 +1,3 @@
-// class kigdomCum{
-//     public:
-//     string baap;
-//     vector<kingdomCum* >beta;
-// }
 class ThroneInheritance {
 public:
     // kingdomCum raja;
@@ -10,8 +5,6 @@ public:
     unordered_set<string> samsan;
     string raja;
     ThroneInheritance(string kingName) {
-        // raja=new kingdomCum();
-        // raja.baap=kingName;
         raja=kingName;
     }
     
