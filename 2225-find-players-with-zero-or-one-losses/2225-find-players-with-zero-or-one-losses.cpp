@@ -15,7 +15,7 @@ public:
         vector<vector<int>> ans(2);
         
         for(auto it : s){
-            if(m.find(it)==m.end()){
+            if(!m[it]){
                 ans[0].push_back(it);
             }else if(m[it]==1){
                 ans[1].push_back(it);
