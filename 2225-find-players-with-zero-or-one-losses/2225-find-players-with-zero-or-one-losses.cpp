@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<vector<int>> findWinners(vector<vector<int>>& matches) {
         
-        set<int> s;
+        unordered_set<int> s;
         unordered_map<int,int> m;
         
         for(auto it :matches){
@@ -23,7 +23,8 @@ public:
                 
             }
         }
-        
+        sort(ans[0].begin(), ans[0].end());
+        sort(ans[1].begin(), ans[1].end());
         return ans;
         
         
