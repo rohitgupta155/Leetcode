@@ -9,13 +9,6 @@ public:
         find(arr1,0,s);
         return ans;
     }
-    void remove(unordered_set<char>& s,int i,string a){
-        while(i>=0)
-        {
-            s.erase(a[i]);
-            i--;
-        }
-    }
     void find(vector<string>& arr,int i,unordered_set<char> s)
     {
         if(i==arr.size())
@@ -28,7 +21,6 @@ public:
         for(int k=0;k<arr[i].size();k++)
             {
                 if(s.find(arr[i][k])!=s.end()){
-                    // remove(s,k-1,arr[i]);
                     t.clear();
                     break;
                 }
