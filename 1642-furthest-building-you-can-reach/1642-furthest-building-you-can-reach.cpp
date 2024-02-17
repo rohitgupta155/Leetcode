@@ -24,7 +24,6 @@ public:
                 }
             }
         }
-        cout<<endl;
         return ans;
         
     }
