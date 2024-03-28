@@ -6,27 +6,18 @@ public:
         for(i=0;i<nums.size();i++)
         {
             m[nums[i]]++;
-            if(m[nums[i]]<=k)
-                curr=max(curr,m[nums[i]]);
-            else
+            if(m[nums[i]]>k)
             {
-                                // cout<<j<<" "<<i<<"->";
-
                 ans=max(ans,i-j);
                 m[nums[i]]--;
-                
                 while(j<i&&nums[j]!=nums[i])
                 {
                     m[nums[j]]--;
                     j++;
                 }
                 j++;
-                                // cout<<j<<" "<<i<<endl;
-
             }
         }
-        //                cout<<j<<" "<<i<<endl<<endl;
-
         ans=max(ans,i-j);
         return ans;
     }
