@@ -35,41 +35,42 @@ public:
             reverse(t.begin(),t.end());
             ans1=t;
         }
-        for(int i=s.size()-1;i>=0;i--)
-        {
+        return ans1;
+//         for(int i=s.size()-1;i>=0;i--)
+//         {
             
-            if(s[i]==')')
-            {
-                ans2+=s[i];
-                c++;
-            }
-            else if(s[i]=='(')
-            {
-                if(c){
-                    c--;
-                    ans2+=s[i];
-                }
-            }
-            else
-                ans2+=s[i];
-        }
-        if(c)
-        {
-            int i=ans2.size()-1;
-            string t;
-            while(i>=0)
-            {
-                if(c&&ans2[i]==')')
-                    c--;
-                else
-                    t+=ans2[i];
-                i--;
-            }
-            reverse(t.begin(),t.end());
-            ans2=t;
-        }
-        reverse(ans2.begin(),ans2.end());
-        // cout<<ans1<<endl<<ans2;
-        return ans1.size()<ans2.size()?ans2:ans1;
+//             if(s[i]==')')
+//             {
+//                 ans2+=s[i];
+//                 c++;
+//             }
+//             else if(s[i]=='(')
+//             {
+//                 if(c){
+//                     c--;
+//                     ans2+=s[i];
+//                 }
+//             }
+//             else
+//                 ans2+=s[i];
+//         }
+//         if(c)
+//         {
+//             int i=ans2.size()-1;
+//             string t;
+//             while(i>=0)
+//             {
+//                 if(c&&ans2[i]==')')
+//                     c--;
+//                 else
+//                     t+=ans2[i];
+//                 i--;
+//             }
+//             reverse(t.begin(),t.end());
+//             ans2=t;
+//         }
+//         reverse(ans2.begin(),ans2.end());
+//         // cout<<ans1<<endl<<ans2;
+//         return ans1.size()<ans2.size()?ans2:ans1;
     }
 };
