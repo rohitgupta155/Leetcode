@@ -26,17 +26,4 @@ public:
             }
         return ans;
     }
-    
-    void solve(vector<vector<int>>& grid,int i,int j,int &ans)
-    {
-        if(i>=0&&j>=0&&i<grid.size()&&j<grid[0].size()&&grid[i][j])
-        {
-            ans+=2;
-            grid[i][j]=0;
-            solve(grid,i,j-1,ans);  
-            solve(grid,i,j+1,ans);
-            solve(grid,i-1,j,ans);
-            solve(grid,i+1,j,ans);
-        }
-    }
 };
