@@ -12,9 +12,15 @@ public:
             m[i[0]].push_back(i[1]);            
             m[i[1]].push_back(i[0]);            
         }
-        cout<<source<<"->";
+        // cout<<source<<"->";
         for(auto i:m[source])
-       { if(!f&&v.find(i)==v.end()){cout<<i<<"->";v.insert(i);find(i,destination);}
+       {
+            if(!f&&v.find(i)==v.end())
+       {
+           // cout<<i<<"->";
+           v.insert(i);
+           find(i,destination);
+       }
          else break;}
         return f;
     }
@@ -24,7 +30,12 @@ public:
             f=true;
             return;}
         for(auto i:m[s])
-         {  if(v.find(i)==v.end()){cout<<i<<"->";v.insert(i); find(i,d);}
+         {  
+            if(v.find(i)==v.end()){
+             // cout<<i<<"->";
+             v.insert(i); 
+             find(i,d);
+         }
           }
     }
 };
