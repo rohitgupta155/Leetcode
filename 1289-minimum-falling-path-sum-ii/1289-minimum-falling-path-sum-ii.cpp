@@ -23,19 +23,6 @@ public:
             }
             
         }
-        // for(auto i:m)
-        // {
-        //     for(auto j:i)
-        //         cout<<j<<" ";
-        //     cout<<endl;
-        // }
-        // cout<<endl;
-        // for(auto i:ans)
-        // {
-        //     for(auto j:i)
-        //         cout<<j<<" ";
-        //     cout<<endl;
-        // }
         return *min_element(ans.back().begin(),ans.back().end());
     }
 };
