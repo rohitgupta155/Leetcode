@@ -11,18 +11,21 @@ public:
         }
     }
     int minOperations(vector<int>& nums, int k) {
-        vector<int> v(32,0),r(32,0);
+        // vector<int> v(32,0),r(32,0);
+        // for(auto i:nums)
+        // {
+        //     takeout(i,v);
+        // }
+        // takeout(k,r);
+        // int ans=0;
+        // for(int i=0;i<32;i++)
+        // {
+        //     if(v[i]%2!=r[i]%2)
+        //         ans++;
+        // }
+        // return ans;
         for(auto i:nums)
-        {
-            takeout(i,v);
-        }
-        takeout(k,r);
-        int ans=0;
-        for(int i=0;i<32;i++)
-        {
-            if(v[i]%2!=r[i]%2)
-                ans++;
-        }
-        return ans;
+            k=k^i;
+        return __builtin_popcount(k);
     }
 };
