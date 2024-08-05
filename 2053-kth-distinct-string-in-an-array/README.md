@@ -5,7 +5,7 @@
 <p>Note that the strings are considered in the <strong>order in which they appear</strong> in the array.</p>
 
 <p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+<p><strong class="example">Example 1:</strong></p>
 
 <pre><strong>Input:</strong> arr = ["d","b","c","b","c","a"], k = 2
 <strong>Output:</strong> "a"
@@ -16,7 +16,7 @@ The only distinct strings in arr are "d" and "a".
 Since k == 2, "a" is returned. 
 </pre>
 
-<p><strong>Example 2:</strong></p>
+<p><strong class="example">Example 2:</strong></p>
 
 <pre><strong>Input:</strong> arr = ["aaa","aa","a"], k = 1
 <strong>Output:</strong> "aaa"
@@ -24,7 +24,7 @@ Since k == 2, "a" is returned.
 All strings in arr are distinct, so the 1<sup>st</sup> string "aaa" is returned.
 </pre>
 
-<p><strong>Example 3:</strong></p>
+<p><strong class="example">Example 3:</strong></p>
 
 <pre><strong>Input:</strong> arr = ["a","b","a"], k = 3
 <strong>Output:</strong> ""
