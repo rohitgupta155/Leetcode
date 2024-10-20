@@ -1,18 +1,19 @@
 class Solution {
 public:
     vector<string> stringSequence(string target) {
-        string temp = "a";
-        vector<string>ans;
-        for(int i =0; i<target.length();i++){
-            while(temp[temp.length()-1]!=target[i]){
-                ans.push_back(temp);
-                temp[temp.length()-1] = temp[temp.length()-1]=='z'?'a':temp[temp.length()-1]+1;
-               
+        vector<string> ans;
+        string curr="a";
+        int i=0;
+        while(i<target.size())
+        {
+            ans.push_back(curr);
+            if(target[i]==curr[i]){
+                curr+="a";
+                i++;
             }
-            ans.push_back(temp);
-            temp+='a';
+            else
+                curr[i]++;
         }
         return ans;
-        
     }
 };
