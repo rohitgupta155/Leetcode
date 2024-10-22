@@ -12,34 +12,22 @@
 class Solution {
 public:
     long long kthLargestLevelSum(TreeNode* root, int k) {
-        int max=0,index;
-        findh(root,max,0);
-        if(k>max)
-            return -1;
-        vector<long long> v(max,0);
+        vector<long long> v;
         find(root,0,v);
-       sort(v.begin(),v.end(),greater<long long>());
-        return v[k-1];
+        sort(v.begin(),v.end());
+        if(k>v.size())
+            return -1;
+        return v[(int)v.size()-k];
     }
     void find(TreeNode* r,int l,vector<long long> &v)
     {
-        if(r==NULL)
+        if(!r)
             return;
+        if((int)v.size()==l)
+            v.push_back(0);
         v[l]+=r->val;
         l++;
         find(r->left,l,v);
         find(r->right,l,v);
-    }
-    void findh(TreeNode *r,int &max,int d)
-    {
-        if(r==NULL)
-        {
-            if(max<d)
-                max=d;
-            return;
-        }
-        d++;
-        findh(r->left,max,d);
-        findh(r->right,max,d);
     }
 };
