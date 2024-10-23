@@ -39,7 +39,7 @@ public:
         c=levelOrder(root);
         for(auto i:c)
             s.push_back(accumulate(i.begin(),i.end(),0));
-        findout(root,0,NULL);
+        findout(root,0);
         return root;
     }
     
