@@ -13,7 +13,6 @@ class Solution {
 public:
     vector<vector<int>> c;
     vector<int> s;
-    
     void findout(TreeNode *root,int l,int left=0,int right=0)
     {
         if(!root)
@@ -58,17 +57,5 @@ public:
         l++;
         find(r->left,l,v);
         find(r->right,l,v);
-    }
-    void findh(TreeNode *r,int &max,int d)
-    {
-        if(r==NULL)
-        {
-            if(max<d)
-                max=d;
-            return;
-        }
-        d++;
-        findh(r->left,max,d);
-        findh(r->right,max,d);
     }
 };
